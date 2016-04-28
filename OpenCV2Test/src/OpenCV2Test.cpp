@@ -127,6 +127,7 @@ RTC::ReturnCode_t OpenCV2Test::onExecute(RTC::UniqueId ec_id)
 
 		SetCameraImage(&m_out, &src_img, m_string_encode, m_int_encode_quality);
 		m_outOut.write();
+		src_img.release();
 	}
   return RTC::RTC_OK;
 }

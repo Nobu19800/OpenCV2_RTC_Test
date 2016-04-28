@@ -132,6 +132,8 @@ RTC::ReturnCode_t OpenCV2Flip::onExecute(RTC::UniqueId ec_id)
 		cv::flip(src_img, dist_img, m_flip_mode);
 		SetCameraImage(&m_out, &dist_img, m_string_encode, m_int_encode_quality);
 		m_outOut.write();
+		src_img.release();
+		dist_img.release();
 	}
   return RTC::RTC_OK;
 }
