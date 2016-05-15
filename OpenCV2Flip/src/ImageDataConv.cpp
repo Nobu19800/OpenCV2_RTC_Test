@@ -38,6 +38,7 @@ cv::Mat GetCameraImage(RTC::CameraImage *ci)
 			return dist_img;
 		}
 	}
+	return cv::Mat();
 
 	
 }
